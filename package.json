@@ -1,0 +1,30 @@
+{
+  "name": "personal-development",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ryan",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "prestart": "lerna run libbuild --stream",
+    "start": "lerna run start --stream",
+    "graph": "yarn workspace @personaldevelopment/graphql",
+    "ui": "yarn workspace @personaldevelopment/ui",
+    "dev": "concurrently -n 'UI,GRAPH' 'yarn ui start' 'yarn graph dev'"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "apollo-server-express": "^3.1.2",
+    "class-validator": "^0.13.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.1.0",
+    "type-graphql": "^1.1.1",
+    "typescript": "^4.3.5"
+  }
+}
