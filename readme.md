@@ -9,6 +9,16 @@ a series of solutions to little problems, focussing mainly on relay v11
 `yarn start` starts the project on port 3000
 
 
+## documentation
+
+yarn
+
+https://classic.yarnpkg.com/en/docs/workspaces/
+
+relay
+
+https://relay.dev/
+
 ## blogs/repos i used to get ideas/help:
 
 monorepo
