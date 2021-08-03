@@ -7,9 +7,9 @@ interface Props {
 export const SportName = ({ name } :Props) => {
 
   return (
-      <header className="App-header">
+      
         <div>
           <p>{name}</p>
         </div>
-      </header>)
+      )
 }

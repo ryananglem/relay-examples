@@ -10,7 +10,11 @@
 import type { ConcreteRequest } from 'relay-runtime';
 export type SportQueryVariables = {||};
 export type SportQueryResponse = {|
-  +hello: string
+  +hello: string,
+  +sport: $ReadOnlyArray<{|
+    +id: number,
+    +name: string,
+  |}>,
 |};
 export type SportQuery = {|
   variables: SportQueryVariables,
@@ -22,6 +26,10 @@ export type SportQuery = {|
 /*
 query SportQuery {
   hello
+  sport {
+    id
+    name
+  }
 }
 */
 
@@ -32,6 +40,31 @@ var v0 = [
     "args": null,
     "kind": "ScalarField",
     "name": "hello",
+    "storageKey": null
+  },
+  {
+    "alias": null,
+    "args": null,
+    "concreteType": "Sport",
+    "kind": "LinkedField",
+    "name": "sport",
+    "plural": true,
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "id",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "name",
+        "storageKey": null
+      }
+    ],
     "storageKey": null
   }
 ];
@@ -53,16 +86,16 @@ return {
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "8d5c30f3ccb741165f0b84113191774d",
+    "cacheID": "c98f966702c3b53681a5d69cb89d6b3d",
     "id": null,
     "metadata": {},
     "name": "SportQuery",
     "operationKind": "query",
-    "text": "query SportQuery {\n  hello\n}\n"
+    "text": "query SportQuery {\n  hello\n  sport {\n    id\n    name\n  }\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '212e8049ec56d59a4b9e8c753b84624f';
+(node/*: any*/).hash = '6c326ffb301d392a9de131aab5d8205b';
 
 module.exports = node;

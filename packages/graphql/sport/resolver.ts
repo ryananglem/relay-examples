@@ -20,7 +20,7 @@ import {
       return sports;
     }
     @Query(returns => Sport, { nullable: true })
-    sportByID(@Arg('id') id: number): SportData | undefined {
+    sportByID(@Arg('id') id: string): SportData | undefined {
       return sports.find(sport => sport.id === id);
     }
   

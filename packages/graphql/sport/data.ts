@@ -1,10 +1,10 @@
 export interface SportData {
-    id: number;
+    id: String;
     name: String;
   }
   
   export const sports: SportData[] = [
-    { id: 1, name: 'Basketball'},
-    { id: 2, name: 'Football'},
-    { id: 3, name: 'Athletics'}
+    { id: '1', name: 'Basketball'},
+    { id: '2', name: 'Football'},
+    { id: '3', name: 'Athletics'}
   ];

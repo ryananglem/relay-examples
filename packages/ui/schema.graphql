@@ -6,11 +6,12 @@ directive @specifiedBy(
 
 type Query {
   hello: String!
-  sportByID(id: Float!): Sport
+  sport: [Sport!]!
+  sportByID(id: String!): Sport
 }
 
 type Sport {
-  id: Int!
+  id: String!
   name: String!
 }
 

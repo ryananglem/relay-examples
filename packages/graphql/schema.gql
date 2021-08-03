@@ -6,10 +6,10 @@
 type Query {
   hello: String!
   sport: [Sport!]!
-  sportByID(id: Float!): Sport
+  sportByID(id: String!): Sport
 }
 
 type Sport {
-  id: Int!
+  id: String!
   name: String!
 }
