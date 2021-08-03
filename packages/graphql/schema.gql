@@ -5,6 +5,7 @@
 
 type Query {
   hello: String!
+  sport: [Sport!]!
   sportByID(id: Float!): Sport
 }
 
