@@ -6,7 +6,7 @@ a series of solutions to little problems, focussing mainly on relay v11
 
 ## scripts 
 
-`yarn start` starts the project on port 3000
+`yarn dev` starts the ui on port 3000 and graphql on port 4000/graphql
 
 
 ## documentation
