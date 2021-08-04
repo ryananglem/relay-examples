@@ -12,7 +12,7 @@ export type SportQueryVariables = {||};
 export type SportQueryResponse = {|
   +hello: string,
   +sport: $ReadOnlyArray<{|
-    +id: number,
+    +id: string,
     +name: string,
   |}>,
 |};

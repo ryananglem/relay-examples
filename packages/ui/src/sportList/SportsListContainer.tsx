@@ -9,12 +9,13 @@ interface Sport {
   id: string
 }
 
-export const SportsListPreloadQuery = (props: any) => {
+export const SportsListContainer = (props: any) => {
   const data: any = usePreloadedQuery(SportQuery, props.preloadedQuery);
   const sportList = data.sport &&
                     data.sport.map((sport: Sport) => (
                       <SportName key={sport.id} name={sport.name} />
                     ))
+  console.log('data ',data)                  
   return (
     <div className="App">
       <header className="App-header">

@@ -11,7 +11,7 @@ a series of solutions to little problems, focussing mainly on relay v11
 
 ## documentation
 
-yarn
+yarn workspaces
 
 https://classic.yarnpkg.com/en/docs/workspaces/
 

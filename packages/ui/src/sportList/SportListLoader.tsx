@@ -1,11 +1,11 @@
 import React from 'react'
 import { preloadedQuery } from "./preloadedQuery";
-import { SportsListPreloadQuery } from "./SportsListPreloadQuery";
+import { SportsListContainer } from "./SportsListContainer";
 const { Suspense } = React;
 
 export const SportListLoader = () => (
 
 <Suspense fallback={'Loading...'}>
-    <SportsListPreloadQuery preloadedQuery={preloadedQuery} />
+    <SportsListContainer preloadedQuery={preloadedQuery} />
 </Suspense>
 )
