@@ -34,3 +34,8 @@ https://kamleshchandnani.com/articles/monorepos-yarn-workspaces-and-lerna-what-t
 graphql
 
 https://www.codewall.co.uk/learn-to-build-a-graphql-express-server-with-typescript/
+
+
+relay
+
+https://stackoverflow.com/questions/57976780/how-to-deal-with-nested-routing-in-relay-modern-v6-experimental

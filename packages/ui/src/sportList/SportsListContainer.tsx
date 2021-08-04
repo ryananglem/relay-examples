@@ -1,31 +1,48 @@
 import React from 'react';
 import { usePreloadedQuery } from 'react-relay/hooks';
-import { SportQuery } from './SportQuery';
+// @ts-ignore
+import graphql from 'babel-plugin-relay/macro';
+
+// import { useFragment } from 'react-relay';
+// import { SportQuery } from './SportQuery';
+import { SportList }  from './SportList';
+// import {SportFragment} from './SportFragment'
 import { SportName } from './SportName';
 
-
-interface Sport {
+interface Props {
+   preloadedQuery : any
+ }
+export interface Sport {
   name: string
-  id: string
 }
 
-export const SportsListContainer = (props: any) => {
-  const data: any = usePreloadedQuery(SportQuery, props.preloadedQuery);
-  const sportList = data.sport &&
-                    data.sport.map((sport: Sport) => (
-                      <SportName key={sport.id} name={sport.name} />
-                    ))
-  console.log('data ',data)                  
+ export interface ISportList {
+    sport: Sport[]
+ }
+
+export const SportsListContainer = ({ preloadedQuery }: Props) => {
+  const data: any = usePreloadedQuery(graphql`
+  query SportsListContainerQuery {
+     hello
+      sport { 
+     ...SportList_sport
+        
+        } 
+  } 
+`, preloadedQuery);
+
+  
+  console.log('data ',data, preloadedQuery)   
+  console.log('sport', data.sport)
+                
   return (
     <div className="App">
-      <header className="App-header">
+      <div>
         <SportName name={data.hello} />
-        <div>
-        { 
-          sportList
-        }
-        </div>
-      </header>
+       </div>
+      <div>
+        <SportList sport={data.sport} />
+      </div>
     </div>
   );
 

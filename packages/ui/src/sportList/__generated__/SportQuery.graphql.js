@@ -12,8 +12,7 @@ export type SportQueryVariables = {||};
 export type SportQueryResponse = {|
   +hello: string,
   +sport: $ReadOnlyArray<{|
-    +id: string,
-    +name: string,
+    +name: string
   |}>,
 |};
 export type SportQuery = {|
@@ -27,7 +26,6 @@ export type SportQuery = {|
 query SportQuery {
   hello
   sport {
-    id
     name
   }
 }
@@ -50,13 +48,6 @@ var v0 = [
     "name": "sport",
     "plural": true,
     "selections": [
-      {
-        "alias": null,
-        "args": null,
-        "kind": "ScalarField",
-        "name": "id",
-        "storageKey": null
-      },
       {
         "alias": null,
         "args": null,
@@ -86,16 +77,16 @@ return {
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "c98f966702c3b53681a5d69cb89d6b3d",
+    "cacheID": "bf77c7c116f28198437ad715ed45584b",
     "id": null,
     "metadata": {},
     "name": "SportQuery",
     "operationKind": "query",
-    "text": "query SportQuery {\n  hello\n  sport {\n    id\n    name\n  }\n}\n"
+    "text": "query SportQuery {\n  hello\n  sport {\n    name\n  }\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '6c326ffb301d392a9de131aab5d8205b';
+(node/*: any*/).hash = '0841a319a5463ae47692c1ecf4723cd1';
 
 module.exports = node;

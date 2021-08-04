@@ -7,9 +7,8 @@ interface Props {
 export const SportName = ({ name } :Props) => {
 
   return (
-      
-        <div>
-          <p>{name}</p>
+        <div >
+          <p style={{ color: 'black'}}>{name}</p>
         </div>
       )
 }

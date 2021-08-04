@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import {
+import  {
+
   RelayEnvironmentProvider,
 } from 'react-relay/hooks';
 // import  GitHubRelayEnvironment from './externalGraph/RelayEnvironment'
@@ -10,8 +11,11 @@ import  LocalRelayEnvironment from './sportList/RelayEnvironment'
 
 import { SportListLoader} from './sportList/SportListLoader'
 import './App.css';
+// import { usePreloadedQuery } from 'react-relay';
 
-const AppRoot = () => (
+const App = () => {
+  // const data  = usePreloadedQuery(appQuery, appQueryRef)
+  return ( 
   <>
    {/* <RelayEnvironmentProvider environment={GitHubRelayEnvironment}>
      <LeoVegasRepositoryLoader />
@@ -21,5 +25,5 @@ const AppRoot = () => (
  </RelayEnvironmentProvider>
  </>
 );
-
-export default AppRoot
+}
+export default App
