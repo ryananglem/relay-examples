@@ -1,10 +1,9 @@
 import React from 'react';
 import { usePreloadedQuery } from 'react-relay/hooks';
-// @ts-ignore
-import graphql from 'babel-plugin-relay/macro';
 
 import { SportList }  from './SportList';
 import { SportName } from './SportName';
+import { SportQuery } from './SportQuery';
 interface Props {
    preloadedQuery : any
  }
@@ -17,14 +16,7 @@ export interface Sport {
  }
 
 export const SportsListContainer = ({ preloadedQuery }: Props) => {
-  const data: any = usePreloadedQuery(graphql`
-  query SportsListContainerQuery {
-     hello
-      sport { 
-          ...SportList_sport
-        } 
-  } 
-`, preloadedQuery);
+  const data: any = usePreloadedQuery(SportQuery, preloadedQuery);
 
   console.log('data ',data, preloadedQuery)   
   console.log('sport', data.sport)

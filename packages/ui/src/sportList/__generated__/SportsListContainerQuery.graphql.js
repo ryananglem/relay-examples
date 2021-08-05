@@ -8,12 +8,12 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type SportList_sport$ref = any;
+type SportFragment_sport$ref = any;
 export type SportsListContainerQueryVariables = {||};
 export type SportsListContainerQueryResponse = {|
   +hello: string,
   +sport: $ReadOnlyArray<{|
-    +$fragmentRefs: SportList_sport$ref
+    +$fragmentRefs: SportFragment_sport$ref
   |}>,
 |};
 export type SportsListContainerQuery = {|
@@ -27,11 +27,12 @@ export type SportsListContainerQuery = {|
 query SportsListContainerQuery {
   hello
   sport {
-    ...SportList_sport
+    ...SportFragment_sport
   }
 }
 
-fragment SportList_sport on Sport {
+fragment SportFragment_sport on Sport {
+  id
   name
 }
 */
@@ -63,7 +64,7 @@ return {
           {
             "args": null,
             "kind": "FragmentSpread",
-            "name": "SportList_sport"
+            "name": "SportFragment_sport"
           }
         ],
         "storageKey": null
@@ -91,6 +92,13 @@ return {
             "alias": null,
             "args": null,
             "kind": "ScalarField",
+            "name": "id",
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
             "name": "name",
             "storageKey": null
           }
@@ -100,16 +108,16 @@ return {
     ]
   },
   "params": {
-    "cacheID": "6f4a219bb85abdbd7257561cea62a488",
+    "cacheID": "2f5f54e49e1721a3ffd19d92a43a5347",
     "id": null,
     "metadata": {},
     "name": "SportsListContainerQuery",
     "operationKind": "query",
-    "text": "query SportsListContainerQuery {\n  hello\n  sport {\n    ...SportList_sport\n  }\n}\n\nfragment SportList_sport on Sport {\n  name\n}\n"
+    "text": "query SportsListContainerQuery {\n  hello\n  sport {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '3dbb962a51abb5a0a7390c653f12a8e8';
+(node/*: any*/).hash = 'db2c1479b35e7a29c78f94baa9d91df1';
 
 module.exports = node;
