@@ -6,7 +6,7 @@ import  {
 } from 'react-relay/hooks';
 // import  GitHubRelayEnvironment from './externalGraph/RelayEnvironment'
 
-import  LocalRelayEnvironment from './sportList/RelayEnvironment'
+import  LocalRelayEnvironment from './relay/RelayEnvironment'
 // import { LeoVegasRepositoryLoader} from './externalGraph/LeoVegasRepositoryLoader'
 
 import { SportListLoader} from './sportList/SportListLoader'

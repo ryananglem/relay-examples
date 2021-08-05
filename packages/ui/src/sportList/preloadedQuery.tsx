@@ -1,5 +1,5 @@
 import { loadQuery } from 'react-relay/hooks';
-import RelayEnvironment from './RelayEnvironment';
+import RelayEnvironment from '../relay/RelayEnvironment';
 import { SportQuery } from './SportQuery';
 
 export const preloadedQuery = loadQuery(RelayEnvironment, SportQuery, {
