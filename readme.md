@@ -39,3 +39,5 @@ https://www.codewall.co.uk/learn-to-build-a-graphql-express-server-with-typescri
 relay
 
 https://stackoverflow.com/questions/57976780/how-to-deal-with-nested-routing-in-relay-modern-v6-experimental
+
+https://www.youtube.com/playlist?list=PLvx8w9g4qv_oIjs-sNY5MX3tcM7Spa8qP

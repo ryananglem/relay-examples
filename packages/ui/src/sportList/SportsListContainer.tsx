@@ -11,10 +11,6 @@ export interface Sport {
   name: string
 }
 
- export interface ISportList {
-    sport: Sport[]
- }
-
 export const SportsListContainer = ({ preloadedQuery }: Props) => {
   const data: any = usePreloadedQuery(SportQuery, preloadedQuery);
 
