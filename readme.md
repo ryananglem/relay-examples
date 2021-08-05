@@ -40,4 +40,17 @@ relay
 
 https://stackoverflow.com/questions/57976780/how-to-deal-with-nested-routing-in-relay-modern-v6-experimental
 
+video playlist giving live coding examples
 https://www.youtube.com/playlist?list=PLvx8w9g4qv_oIjs-sNY5MX3tcM7Spa8qP
+
+example typescript repo
+https://github.com/relay-tools/relay-compiler-language-typescript
+
+
+.. I know this is in the `package.json` but this is important for emmiting the typescript types
+
+https://github.com/relay-tools/relay-compiler-language-typescript
+
+a component example is here:
+
+https://github.com/relay-tools/relay-compiler-language-typescript/blob/master/example/ts/components/Todo.tsx

@@ -1,11 +1,11 @@
 import React from 'react';
-import { usePreloadedQuery } from 'react-relay/hooks';
+import { PreloadedQuery, usePreloadedQuery } from 'react-relay/hooks';
 
 import { SportList }  from './SportList';
 import { SportName } from './SportName';
 import { SportQuery } from './SportQuery';
 interface Props {
-   preloadedQuery : any
+   preloadedQuery : PreloadedQuery<any, Record<string, unknown>>
  }
 export interface Sport {
   name: string

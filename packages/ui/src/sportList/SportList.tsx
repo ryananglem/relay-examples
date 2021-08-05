@@ -1,13 +1,17 @@
 import React from 'react'
 import { useFragment } from 'react-relay';
-// @ts-ignore
-// import graphql from 'babel-plugin-relay/macro';
+
 import { SportFragment } from './SportFragment'
 import { SportName} from './SportName'
 import { Sport } from './SportsListContainer';
+import { SportFragment_sport$key} from '../__relay_artifacts__/SportFragment_sport.graphql'
 
-export const SportList = (props: any) => {
-    const fragmentData = useFragment(SportFragment, props.sport)
+interface Props{
+    sport: SportFragment_sport$key
+}
+
+export const SportList = ({ sport}: Props) => {
+    const fragmentData = useFragment(SportFragment, sport)
 
     console.log('fragmentData', fragmentData)
 

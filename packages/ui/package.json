@@ -22,12 +22,13 @@
   "devDependencies": {
     "babel-plugin-relay": "^11.0.2",
     "graphql": "^15.5.1",
-    "relay-compiler": "^11.0.2"
+    "relay-compiler": "^11.0.2",
+    "relay-compiler-language-typescript": "^14.0.0"
   },
   "scripts": {
     "start": "yarn run relay && react-scripts start",
     "build": "yarn run relay && react-scripts build",
-    "relay": "yarn run relay-compiler --schema schema.graphql --src ./src/ --watchman false $@ --extensions=ts --extensions=tsx",
+    "relay": "yarn run relay-compiler --schema schema.graphql --src ./src/ --watchman false $@ --extensions=ts --extensions=tsx --language typescript --artifactDirectory ./src/__relay_artifacts__",
     "update-schema": "get-graphql-schema http://localhost:4000/graphql > schema.graphql",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
