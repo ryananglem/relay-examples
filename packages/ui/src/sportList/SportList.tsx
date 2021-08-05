@@ -10,10 +10,7 @@ export const SportList = (props: any) => {
        
         name
    }`, props.sport)
-//    const fragmentData: any = useSuspenseFragment(graphql`query SportListQuery { sport {
-//     name
-//    }
-// }`, props.sport)
+
     console.log('fragmentData', fragmentData)
 
     const sportData = fragmentData &&   

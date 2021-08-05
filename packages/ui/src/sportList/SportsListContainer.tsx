@@ -3,12 +3,8 @@ import { usePreloadedQuery } from 'react-relay/hooks';
 // @ts-ignore
 import graphql from 'babel-plugin-relay/macro';
 
-// import { useFragment } from 'react-relay';
-// import { SportQuery } from './SportQuery';
 import { SportList }  from './SportList';
-// import {SportFragment} from './SportFragment'
 import { SportName } from './SportName';
-
 interface Props {
    preloadedQuery : any
  }
@@ -25,13 +21,11 @@ export const SportsListContainer = ({ preloadedQuery }: Props) => {
   query SportsListContainerQuery {
      hello
       sport { 
-     ...SportList_sport
-        
+          ...SportList_sport
         } 
   } 
 `, preloadedQuery);
 
-  
   console.log('data ',data, preloadedQuery)   
   console.log('sport', data.sport)
                 
