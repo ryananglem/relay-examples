@@ -13,10 +13,9 @@ export interface Sport {
 }
 
 export const SportsListContainer = ({ preloadedQuery }: Props) => {
-  const data: any = usePreloadedQuery(SportQuery, preloadedQuery);
+  const data: SportQueryResponse = usePreloadedQuery(SportQuery, preloadedQuery);
 
-  console.log('data ',data, preloadedQuery)   
-  console.log('sport', data.sport)
+  console.log('list sport', data.sport)
                 
   return (
     <div className="App">

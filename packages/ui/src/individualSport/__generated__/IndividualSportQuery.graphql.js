@@ -13,10 +13,9 @@ export type IndividualSportQueryVariables = {|
   id: string
 |};
 export type IndividualSportQueryResponse = {|
-  +hello: string,
   +sportByID: ?{|
     +$fragmentRefs: SportFragment_sport$ref
-  |},
+  |}
 |};
 export type IndividualSportQuery = {|
   variables: IndividualSportQueryVariables,
@@ -29,7 +28,6 @@ export type IndividualSportQuery = {|
 query IndividualSportQuery(
   $id: String!
 ) {
-  hello
   sportByID(id: $id) {
     ...SportFragment_sport
   }
@@ -49,14 +47,7 @@ var v0 = [
     "name": "id"
   }
 ],
-v1 = {
-  "alias": null,
-  "args": null,
-  "kind": "ScalarField",
-  "name": "hello",
-  "storageKey": null
-},
-v2 = [
+v1 = [
   {
     "kind": "Variable",
     "name": "id",
@@ -70,10 +61,9 @@ return {
     "metadata": null,
     "name": "IndividualSportQuery",
     "selections": [
-      (v1/*: any*/),
       {
         "alias": null,
-        "args": (v2/*: any*/),
+        "args": (v1/*: any*/),
         "concreteType": "Sport",
         "kind": "LinkedField",
         "name": "sportByID",
@@ -97,10 +87,9 @@ return {
     "kind": "Operation",
     "name": "IndividualSportQuery",
     "selections": [
-      (v1/*: any*/),
       {
         "alias": null,
-        "args": (v2/*: any*/),
+        "args": (v1/*: any*/),
         "concreteType": "Sport",
         "kind": "LinkedField",
         "name": "sportByID",
@@ -126,16 +115,16 @@ return {
     ]
   },
   "params": {
-    "cacheID": "fc8532f3d263717ca256d74d5877f8ca",
+    "cacheID": "3feb8b7a36cd6a159094b69017530d18",
     "id": null,
     "metadata": {},
     "name": "IndividualSportQuery",
     "operationKind": "query",
-    "text": "query IndividualSportQuery(\n  $id: String!\n) {\n  hello\n  sportByID(id: $id) {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
+    "text": "query IndividualSportQuery(\n  $id: String!\n) {\n  sportByID(id: $id) {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '25f5871a8c866a5e0421d5ba0aede561';
+(node/*: any*/).hash = '42544f570c2286a0e69b0282dd984c72';
 
 module.exports = node;

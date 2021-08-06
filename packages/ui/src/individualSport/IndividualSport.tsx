@@ -7,10 +7,25 @@ interface Props {
 export const IndividualSport = ({sport}:Props) => {
     const data = useFragment(SportFragment, sport)
     console.log('data', data)
-    return (
+    return !data ? null :(
     <div>
         highlighted sport: {data.name}
     </div>
 )
     }
 
+    // console.log(data)
+    // ...SportFragment_sport 
+
+    //  getSportById(id: $id) 
+/* 
+    const [data, refetch] = useRefetchableFragment(graphql`
+    fragment IndividualSportContainerFragment on HighlightQuery 
+        @refetchable(queryName: "SportRefreshQuery") {
+            individualSport { getSportById(id: $id) {
+                name
+            }
+        }
+    }
+    `, sport)    
+*/
