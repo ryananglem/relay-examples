@@ -8,7 +8,7 @@ export type SportQueryVariables = {};
 export type SportQueryResponse = {
     readonly hello: string;
     readonly sport: ReadonlyArray<{
-        readonly " $fragmentRefs": FragmentRefs<"SportFragment_sport">;
+        readonly " $fragmentRefs": FragmentRefs<"SportListFragment_sport">;
     }>;
 };
 export type SportQuery = {
@@ -22,11 +22,11 @@ export type SportQuery = {
 query SportQuery {
   hello
   sport {
-    ...SportFragment_sport
+    ...SportListFragment_sport
   }
 }
 
-fragment SportFragment_sport on Sport {
+fragment SportListFragment_sport on Sport {
   id
   name
 }
@@ -59,7 +59,7 @@ return {
           {
             "args": null,
             "kind": "FragmentSpread",
-            "name": "SportFragment_sport"
+            "name": "SportListFragment_sport"
           }
         ],
         "storageKey": null
@@ -103,14 +103,14 @@ return {
     ]
   },
   "params": {
-    "cacheID": "f0eb0f02f0fec2ad6ef01d08123ad33b",
+    "cacheID": "455e116865098a8710744ea46e9d2521",
     "id": null,
     "metadata": {},
     "name": "SportQuery",
     "operationKind": "query",
-    "text": "query SportQuery {\n  hello\n  sport {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
+    "text": "query SportQuery {\n  hello\n  sport {\n    ...SportListFragment_sport\n  }\n}\n\nfragment SportListFragment_sport on Sport {\n  id\n  name\n}\n"
   }
 };
 })();
-(node as any).hash = 'ecc9dba3a97b5c9e6e6b714632b04c8e';
+(node as any).hash = '0323461358ba381a07083b45d1073e89';
 export default node;

@@ -1,17 +1,17 @@
 import React from 'react'
 import { useFragment } from 'react-relay';
 
-import { SportFragment } from './SportFragment'
+import { SportListFragment } from './SportListFragment'
 import { SportName} from './SportName'
 import { Sport } from './SportsListContainer';
-import { SportFragment_sport$key} from '../__relay_artifacts__/SportFragment_sport.graphql'
+// import { SportListFragment_sport$key} from '../__relay_artifacts__/SportListFragment_sport.graphql'
 
 interface Props{
-    sport: SportFragment_sport$key
+    sport: any //SportListFragment_sport$key
 }
 
 export const SportList = ({ sport}: Props) => {
-    const fragmentData = useFragment(SportFragment, sport)
+    const fragmentData = useFragment(SportListFragment, sport)
 
     console.log('fragmentData', fragmentData)
 

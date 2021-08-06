@@ -54,3 +54,10 @@ https://github.com/relay-tools/relay-compiler-language-typescript
 a component example is here:
 
 https://github.com/relay-tools/relay-compiler-language-typescript/blob/master/example/ts/components/Todo.tsx
+
+
+
+google cloud 
+
+https://cloud.google.com/storage/docs/hosting-static-website
+

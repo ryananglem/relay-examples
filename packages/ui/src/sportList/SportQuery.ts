@@ -5,7 +5,7 @@ export const SportQuery = graphql`
 query SportQuery {
    hello
     sport { 
-        ...SportFragment_sport
+        ...SportListFragment_sport
       } 
 } 
 `;

@@ -9,24 +9,28 @@
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
 type SportFragment_sport$ref = any;
-export type SportsListContainerQueryVariables = {||};
-export type SportsListContainerQueryResponse = {|
-  +hello: string,
-  +sport: $ReadOnlyArray<{|
-    +$fragmentRefs: SportFragment_sport$ref
-  |}>,
+export type IndividualSportQueryVariables = {|
+  id: string
 |};
-export type SportsListContainerQuery = {|
-  variables: SportsListContainerQueryVariables,
-  response: SportsListContainerQueryResponse,
+export type IndividualSportQueryResponse = {|
+  +hello: string,
+  +sportByID: ?{|
+    +$fragmentRefs: SportFragment_sport$ref
+  |},
+|};
+export type IndividualSportQuery = {|
+  variables: IndividualSportQueryVariables,
+  response: IndividualSportQueryResponse,
 |};
 */
 
 
 /*
-query SportsListContainerQuery {
+query IndividualSportQuery(
+  $id: String!
+) {
   hello
-  sport {
+  sportByID(id: $id) {
     ...SportFragment_sport
   }
 }
@@ -38,28 +42,42 @@ fragment SportFragment_sport on Sport {
 */
 
 const node/*: ConcreteRequest*/ = (function(){
-var v0 = {
+var v0 = [
+  {
+    "defaultValue": null,
+    "kind": "LocalArgument",
+    "name": "id"
+  }
+],
+v1 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
   "name": "hello",
   "storageKey": null
-};
+},
+v2 = [
+  {
+    "kind": "Variable",
+    "name": "id",
+    "variableName": "id"
+  }
+];
 return {
   "fragment": {
-    "argumentDefinitions": [],
+    "argumentDefinitions": (v0/*: any*/),
     "kind": "Fragment",
     "metadata": null,
-    "name": "SportsListContainerQuery",
+    "name": "IndividualSportQuery",
     "selections": [
-      (v0/*: any*/),
+      (v1/*: any*/),
       {
         "alias": null,
-        "args": null,
+        "args": (v2/*: any*/),
         "concreteType": "Sport",
         "kind": "LinkedField",
-        "name": "sport",
-        "plural": true,
+        "name": "sportByID",
+        "plural": false,
         "selections": [
           {
             "args": null,
@@ -75,18 +93,18 @@ return {
   },
   "kind": "Request",
   "operation": {
-    "argumentDefinitions": [],
+    "argumentDefinitions": (v0/*: any*/),
     "kind": "Operation",
-    "name": "SportsListContainerQuery",
+    "name": "IndividualSportQuery",
     "selections": [
-      (v0/*: any*/),
+      (v1/*: any*/),
       {
         "alias": null,
-        "args": null,
+        "args": (v2/*: any*/),
         "concreteType": "Sport",
         "kind": "LinkedField",
-        "name": "sport",
-        "plural": true,
+        "name": "sportByID",
+        "plural": false,
         "selections": [
           {
             "alias": null,
@@ -108,16 +126,16 @@ return {
     ]
   },
   "params": {
-    "cacheID": "2f5f54e49e1721a3ffd19d92a43a5347",
+    "cacheID": "fc8532f3d263717ca256d74d5877f8ca",
     "id": null,
     "metadata": {},
-    "name": "SportsListContainerQuery",
+    "name": "IndividualSportQuery",
     "operationKind": "query",
-    "text": "query SportsListContainerQuery {\n  hello\n  sport {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
+    "text": "query IndividualSportQuery(\n  $id: String!\n) {\n  hello\n  sportByID(id: $id) {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'db2c1479b35e7a29c78f94baa9d91df1';
+(node/*: any*/).hash = '25f5871a8c866a5e0421d5ba0aede561';
 
 module.exports = node;

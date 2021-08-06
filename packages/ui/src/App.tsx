@@ -10,11 +10,10 @@ import  LocalRelayEnvironment from './relay/RelayEnvironment'
 // import { LeoVegasRepositoryLoader} from './externalGraph/LeoVegasRepositoryLoader'
 
 import { SportListLoader} from './sportList/SportListLoader'
+import {IndividualSportLoader } from './individualSport/IndividualSportLoader'
 import './App.css';
-// import { usePreloadedQuery } from 'react-relay';
 
 const App = () => {
-  // const data  = usePreloadedQuery(appQuery, appQueryRef)
   return ( 
   <>
    {/* <RelayEnvironmentProvider environment={GitHubRelayEnvironment}>
@@ -22,6 +21,7 @@ const App = () => {
  </RelayEnvironmentProvider> */}
  <RelayEnvironmentProvider environment={LocalRelayEnvironment}>
      <SportListLoader />
+     <IndividualSportLoader /> 
  </RelayEnvironmentProvider>
  </>
 );

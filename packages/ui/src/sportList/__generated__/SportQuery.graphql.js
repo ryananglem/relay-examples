@@ -8,12 +8,12 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type SportFragment_sport$ref = any;
+type SportListFragment_sport$ref = any;
 export type SportQueryVariables = {||};
 export type SportQueryResponse = {|
   +hello: string,
   +sport: $ReadOnlyArray<{|
-    +$fragmentRefs: SportFragment_sport$ref
+    +$fragmentRefs: SportListFragment_sport$ref
   |}>,
 |};
 export type SportQuery = {|
@@ -27,11 +27,11 @@ export type SportQuery = {|
 query SportQuery {
   hello
   sport {
-    ...SportFragment_sport
+    ...SportListFragment_sport
   }
 }
 
-fragment SportFragment_sport on Sport {
+fragment SportListFragment_sport on Sport {
   id
   name
 }
@@ -64,7 +64,7 @@ return {
           {
             "args": null,
             "kind": "FragmentSpread",
-            "name": "SportFragment_sport"
+            "name": "SportListFragment_sport"
           }
         ],
         "storageKey": null
@@ -108,16 +108,16 @@ return {
     ]
   },
   "params": {
-    "cacheID": "f0eb0f02f0fec2ad6ef01d08123ad33b",
+    "cacheID": "455e116865098a8710744ea46e9d2521",
     "id": null,
     "metadata": {},
     "name": "SportQuery",
     "operationKind": "query",
-    "text": "query SportQuery {\n  hello\n  sport {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
+    "text": "query SportQuery {\n  hello\n  sport {\n    ...SportListFragment_sport\n  }\n}\n\nfragment SportListFragment_sport on Sport {\n  id\n  name\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'ecc9dba3a97b5c9e6e6b714632b04c8e';
+(node/*: any*/).hash = '0323461358ba381a07083b45d1073e89';
 
 module.exports = node;
