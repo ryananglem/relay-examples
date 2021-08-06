@@ -21,7 +21,14 @@ import {
     }
     @Query(returns => Sport, { nullable: true })
     sportByID(@Arg('id') id: string): SportData | undefined {
-      return sports.find(sport => sport.id === id);
+      const extra = Date.now() % 2 === 0
+      const sport = sports.find(sport => sport.id === id);
+      const sportName  = extra && sport ? sport!.name + " HOT!" : sport!.name
+      const hotOrNotSport  = sport && ({
+        id,
+        name: sportName
+      })
+      return hotOrNotSport
     }
   
   }
