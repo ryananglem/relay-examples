@@ -10,6 +10,6 @@ type Query {
 }
 
 type Sport {
-  id: String!
+  id: ID!
   name: String!
 }

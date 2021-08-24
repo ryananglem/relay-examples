@@ -3,6 +3,7 @@
 // @ts-nocheck
 
 import { ConcreteRequest } from "relay-runtime";
+
 import { FragmentRefs } from "relay-runtime";
 export type SportQueryVariables = {};
 export type SportQueryResponse = {
@@ -23,6 +24,7 @@ query SportQuery {
   hello
   sport {
     ...SportFragment_sport
+    id
   }
 }
 
@@ -103,12 +105,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "f0eb0f02f0fec2ad6ef01d08123ad33b",
+    "cacheID": "46a31da4dd3071757db5a2c041eb8919",
     "id": null,
     "metadata": {},
     "name": "SportQuery",
     "operationKind": "query",
-    "text": "query SportQuery {\n  hello\n  sport {\n    ...SportFragment_sport\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
+    "text": "query SportQuery {\n  hello\n  sport {\n    ...SportFragment_sport\n    id\n  }\n}\n\nfragment SportFragment_sport on Sport {\n  id\n  name\n}\n"
   }
 };
 })();
