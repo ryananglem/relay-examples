@@ -1,11 +1,11 @@
 import React from 'react'
-import { useFragment } from 'react-relay/hooks'
+import { useRefetchableFragment } from 'react-relay/hooks'
 import {SportFragment } from './SportFragment'
 interface Props {
     sport: any
 }
 export const IndividualSport = ({sport}:Props) => {
-    const data = useFragment(SportFragment, sport)
+    const [data, refetch] = useRefetchableFragment(SportFragment, sport)
     console.log('data', data)
     return !data ? null :(
     <div>

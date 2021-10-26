@@ -10,7 +10,7 @@ interface Props{
     sport: any //SportListFragment_sport$key
 }
 
-export const SportList = ({ sport}: Props) => {
+export const SportList = ({ sport }: Props) => {
     const fragmentData = useFragment(SportListFragment, sport)
 
     console.log('fragmentData', fragmentData)

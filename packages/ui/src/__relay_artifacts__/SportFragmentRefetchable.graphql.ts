@@ -4,15 +4,15 @@
 
 import { ReaderFragment } from "relay-runtime";
 import { FragmentRefs } from "relay-runtime";
-export type SportFragment_sport = {
+export type SportFragmentRefetchable = {
     readonly id: string;
     readonly name: string;
-    readonly " $refType": "SportFragment_sport";
+    readonly " $refType": "SportFragmentRefetchable";
 };
-export type SportFragment_sport$data = SportFragment_sport;
-export type SportFragment_sport$key = {
-    readonly " $data"?: SportFragment_sport$data;
-    readonly " $fragmentRefs": FragmentRefs<"SportFragment_sport">;
+export type SportFragmentRefetchable$data = SportFragmentRefetchable;
+export type SportFragmentRefetchable$key = {
+    readonly " $data"?: SportFragmentRefetchable$data;
+    readonly " $fragmentRefs": FragmentRefs<"SportFragmentRefetchable">;
 };
 
 
@@ -21,7 +21,7 @@ const node: ReaderFragment = {
   "argumentDefinitions": [],
   "kind": "Fragment",
   "metadata": null,
-  "name": "SportFragment_sport",
+  "name": "SportFragmentRefetchable",
   "selections": [
     {
       "alias": null,
@@ -41,5 +41,5 @@ const node: ReaderFragment = {
   "type": "Sport",
   "abstractKey": null
 };
-(node as any).hash = '7b31a264d5304f193d4a61299fb26906';
+(node as any).hash = '3de9bcb9e0765f42564b2ab503c587ab';
 export default node;
