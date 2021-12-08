@@ -47,6 +47,8 @@ example typescript repo
 https://github.com/relay-tools/relay-compiler-language-typescript
 
 
+https://gist.github.com/AugustoCalaca/f4913a09a7e3f265513f6cc60ea5a3b6
+
 .. I know this is in the `package.json` but this is important for emmiting the typescript types
 
 https://github.com/relay-tools/relay-compiler-language-typescript
